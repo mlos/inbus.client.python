@@ -6,8 +6,8 @@
 import json
 import socket
 
-from ..shared.opcode import Opcode
-from ..shared.defaults import Defaults
+from inbus.shared.opcode import Opcode
+from inbus.shared.defaults import Defaults
 
 
 class Subscriber(object):

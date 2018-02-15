@@ -1,4 +1,4 @@
-:q:qiu#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Copyright (c) 2018 Maarten Los
 # See LICENSE.rst for details.
@@ -6,8 +6,8 @@
 import json
 import socket
 
-from ..shared.opcode import Opcode
-from ..shared.defaults import Defaults
+from inbus.shared.opcode import Opcode
+from inbus.shared.defaults import Defaults
 
 
 class Publisher(object):
