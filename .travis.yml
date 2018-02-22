@@ -15,6 +15,7 @@ matrix:
           env: TOXENV=py37
 
 install:
+    - pip install --index-url https://test.pypi.org/simple inbus-server
     - pip install .
     - pip install tox
 
