@@ -44,18 +44,22 @@ class Subscriber(object):
                            'payload': ''})
 
     def get_published_message(self):
+        """
+        Listens for published messages
+        :returns: A tuple (payload, applicationType)
+        :raises RuntimeError: if the message cannot be decoded correctly
+        """
         data, addr = self._socket.recvfrom(self._buffer_size)
         try:
             message = json.loads(data)
         except ValueError:
-            return None
-        
+            return (None, None)
+
         try:
             payload = message["payload"]
+            application = message["application"]
+            applicationType = application[1]
         except KeyError:
-            return None
+            raise RuntimeError
 
-        return payload
-
-    
-        
+        return payload, applicationType

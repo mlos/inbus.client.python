@@ -5,15 +5,14 @@ import os
 import codecs
 import re
 import sys
-from io import open
 from setuptools import setup, find_packages
 
 ####################################################
-NAME="inbus.client.python"
-KEYWORDS= ["client inbus publisher subscriber pub sub"]
-META_PATH = os.path.join("src", "inbus.client.python", "__init__.py")
+NAME = "inbus-client"
+KEYWORDS = ["client inbus publisher subscriber pub sub"]
+META_PATH = os.path.join("src", "inbus", "__init__.py")
 PACKAGES = find_packages(where="src")
-CLASSIFIERS=[
+CLASSIFIERS = [
         "License :: OSI Approved :: BSD License",
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Information Technology",
@@ -31,6 +30,7 @@ CLASSIFIERS=[
 ####################################################
 HERE = os.path.abspath(os.path.dirname(__file__))
 
+
 def read(*parts):
     """
     Build an absolute path from *parts* and and return the contents of the
@@ -39,7 +39,9 @@ def read(*parts):
     with codecs.open(os.path.join(HERE, *parts), "rb", "utf-8") as f:
         return f.read()
 
+
 META_FILE = read(META_PATH)
+
 
 def find_meta(meta):
     """
@@ -61,8 +63,9 @@ test_deps = [
     "pytest>=3.1",
     "pytest-cov"
 ]
-
-install_deps = [ ]
+install_deps = [
+    "inbus-server>=1.0.0"
+]
 
 setup(
     name=NAME,

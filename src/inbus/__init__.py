@@ -5,7 +5,7 @@
 
 __version__ = "1.0.0"
 
-__title__ = "inbus.client.python"
+__title__ = "inbus-client"
 __description__ = "Python client for inbus"
 __uri__ = "https://github.com/mlos/inbus.client.python"
 __doc__ = __description__ + " <" + __uri__ + ">"
