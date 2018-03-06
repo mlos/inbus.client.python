@@ -3,7 +3,7 @@
 # Copyright (c) 2018 Maarten Los
 # See LICENSE.rst for details.
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 __title__ = "inbus-client"
 __description__ = "Python client for inbus"
