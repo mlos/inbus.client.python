@@ -2,7 +2,7 @@ Python Client for Inbus
 =======================
 
 .. image:: https://readthedocs.org/projects/inbus/badge/?version=latest
-   :target: inbusclientpython.readthedocs.io
+   :target: http://inbusclientpython.readthedocs.io/en/latest/
    :alt: Documentation Status
 
 .. image:: https://travis-ci.org/mlos/inbus.client.python.svg?branch=master
