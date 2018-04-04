@@ -6,4 +6,5 @@ Version   Description           Date
 ========= ===================== ==============
 **1.0.0** * Initial version     01-Feb-2018
 **1.0.1** * Fixed distribution  06-Mar-2018
+**1.1.0** * Protocol v2         02-Apr-2018
 ========= ===================== ==============

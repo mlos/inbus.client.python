@@ -5,8 +5,8 @@ Python Client for Inbus
 Release |release| (:doc:`What's new? <changelog>`).
 
 .. include:: ../README.rst
-   :start-after: teaser-begin
-   :end-before: -spiel-end-
+   :start-after: -readme-start-
+   :end-before: -readme-end-
 
 Table of Contents
 ======================
