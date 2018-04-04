@@ -5,6 +5,7 @@
 
 import json
 import socket
+import base64
 
 from inbus.shared.opcode import Opcode
 from inbus.shared.defaults import Defaults
@@ -37,7 +38,7 @@ class Subscriber(object):
         sock.close()
 
     def _to_outgoing_message(self, opcode):
-        return json.dumps({'version': 1,
+        return json.dumps({'version': Defaults.INBUS_VERSION,
                            'opcode': opcode,
                            'application': [self._app_key, 0],
                            'address': list(self._socket.getsockname()),
@@ -56,10 +57,18 @@ class Subscriber(object):
             return (None, None)
 
         try:
+            version = message["version"]
             payload = message["payload"]
             application = message["application"]
             applicationType = application[1]
         except KeyError:
             raise RuntimeError
+
+        if version >= 2:
+            try:
+                payload = base64.b64decode(payload)
+            except TypeError:
+                pass
+                #TODO: log
 
         return payload, applicationType
